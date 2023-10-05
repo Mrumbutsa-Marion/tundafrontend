@@ -1,115 +1,224 @@
 /* index.css */
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #8d9e6f;
+.navbar {
+    background-color: #333;
     display: flex;
-    justify-content: center;
-    /* Change align-items to flex-start */
-    align-items: flex-start;
-    height: 100vh;
+    justify-content: space-around; /* Spread items evenly */
   }
   
-  .container {
-    background-color: #b2bda0;
-    padding: 20px;
-    border-radius: 10px;
+  .navbar-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Spread items evenly */
+    width: 100%; /* Occupy full width of the navbar */
+  }
+  
+  .navbar-item {
+    margin: 0;
+    padding: 15px 20px;
+  }
+  
+  .navbar-item a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navbar-item:hover {
+    background-color: #555;
+  }
+  
+ /* index.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-container,
+  .text-container-container {
+    background-color: #3498db; /* Blue rectangle background color */
+    padding: 20px; /* Add padding for space around content */
+  }
+  
+  .header {
+    color: #fff;
     text-align: center;
+  }
+  
+  .page-name {
+    font-size: 3em;
+    margin-bottom: 20px;
   }
   
   .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px; /* Add some space between name and buttons */
   }
   
   .button {
-    background-color: #ebefe3;
-    border: none;
-    padding: 10px 20px;
     margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #8ace53;
+    color: #333;
+    padding: 10px 20px;
     text-decoration: none;
-  }
-  
-  .button:hover {
-    background-color: #d4dac2;
+    border-radius: 5px;
   }
   
   .button-text {
-    color: black;
-    font-size: 16px;
+    font-size: 1.2em;
   }
   
   .text-container {
-    background-color: #b2bda0;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
     text-align: center;
+    margin: 50px 0;
   }
   
   .subscribe-button {
-    background-color: #ebefe3;
-    border: none;
+    background-color: #e3a6a6;
+    color: #131212;
     padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
     text-decoration: none;
-  }
-  
-  .subscribe-button:hover {
-    background-color: #d4dac2;
+    border-radius: 5px;
   }
   
   .subscribe-text {
-    color: black;
-    font-size: 16px;
+    font-size: 1.2em;
   }
   
-  /* Navbar.css */
-
-.navbar {
-    background-color: #b2bda0;
-    padding: 10px;
-    border-radius: 10px;
+  /*donate*/
+  .don {
+    text-align: center;
   }
   
-  .navbar-list {
-    list-style: none;
+  .tagline {
+    font-family: 'Your Chosen Font', sans-serif; /* Add your preferred font here */
+  }
+  .don {
+    margin-top: 50px; /* Adjust the margin as needed */
+  }
+  
+  .tagline {
+    font-size: 1.2em; /* Adjust font size as needed */
+  }
+  
+  .buttons {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .donateButton {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff; /* Adjust the color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .donateButton:hover {
+    background-color: #0056b3; /* Adjust hover color as needed */
+  }
+  
+  /*about*/
+  
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .about-section {
+    background-color: #86dd7c; /* Add your desired background color here */
+    padding: 20px;
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section h2,
+  .about-section h3 {
+    color: #333; /* Add your desired text color here */
+  }
+  
+  .about-section p {
+    color: #555; /* Add your desired text color here */
+  }
+  
+  .about-section ul {
+    list-style-type: none;
     padding: 0;
   }
   
-  .navbar-item {
-    margin: 0;
-    padding: 0;
-    margin: 0 10px;
+  .about-section li {
+    margin-bottom: 8px;
   }
   
-  .navbar-item a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
+  .about-section strong {
     font-weight: bold;
   }
   
-  .navbar-item a:hover {
-    color: #4a4a4a;
+  
+
+/* Style for the Signup section */
+.signup-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Footer Styles */
-.footer {
-    background: #8d9e6f;
+  .signup-container h2 {
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 50%;
-    
+    margin-bottom: 20px;
   }
   
+  .signup-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  .signup-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .signup-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signup-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the Success Alert */
+  .success-alert {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
   
