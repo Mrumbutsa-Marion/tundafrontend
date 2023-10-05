@@ -1,10 +1,18 @@
 /* index.css */
 
-.navbar {
-    background-color: #333;
+body {
+    background-color: #8d9e6f;
+    color: #000;
+  }
+  
+  .navbar {
+    background-color: #b2bda0;
     display: flex;
     justify-content: space-around; /* Spread items evenly */
+    border-radius: 15px; /* Oval out the edges */
+    overflow: hidden; /* Hide the overflow if needed */
   }
+  
   
   .navbar-list {
     list-style-type: none;
@@ -21,28 +29,29 @@
   
   .navbar-item a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
   }
   
   .navbar-item:hover {
-    background-color: #555;
+    background-color: #b2bda0;
   }
   
- /* index.css */
-
-.container {
+  .container {
     max-width: 1200px;
     margin: 0 auto;
   }
   
   .header-container,
   .text-container-container {
-    background-color: #3498db; /* Blue rectangle background color */
-    padding: 20px; /* Add padding for space around content */
-  }
+    background-color: #b2bda0; /* Use b2bda0 for containers */
+    padding: 80px; /* Add padding for space around content */
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
   
   .header {
-    color: #fff;
+    color: #000;
     text-align: center;
   }
   
@@ -59,8 +68,8 @@
   
   .button {
     margin: 0 10px;
-    background-color: #8ace53;
-    color: #333;
+    background-color: #ebefe3; /* Use ebefe3 for buttons */
+    color: #000;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -76,8 +85,8 @@
   }
   
   .subscribe-button {
-    background-color: #e3a6a6;
-    color: #131212;
+    background-color: #ebefe3; /* Use ebefe3 for buttons */
+    color: #000;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -88,6 +97,7 @@
   }
   
   /*donate*/
+  
   .don {
     text-align: center;
   }
@@ -95,6 +105,7 @@
   .tagline {
     font-family: 'Your Chosen Font', sans-serif; /* Add your preferred font here */
   }
+  
   .don {
     margin-top: 50px; /* Adjust the margin as needed */
   }
@@ -126,16 +137,14 @@
   }
   
   /*about*/
-  
-
-.about-container {
+  .main-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .about-section {
-    background-color: #86dd7c; /* Add your desired background color here */
+    background-color: #ebefe3;
     padding: 20px;
     margin: 10px;
     max-width: 400px;
@@ -144,12 +153,9 @@
   }
   
   .about-section h2,
-  .about-section h3 {
-    color: #333; /* Add your desired text color here */
-  }
-  
+  .about-section h3,
   .about-section p {
-    color: #555; /* Add your desired text color here */
+    color: #000;
   }
   
   .about-section ul {
@@ -166,13 +172,13 @@
   }
   
   
-
-/* Style for the Signup section */
-.signup-container {
+  /* Signup Section */
+  .signup-container {
     max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+    margin-top: 100px;
+    margin-left: 500px;
+    padding: 40px 20px;
+    background-color: #ebefe3; /* Use ebefe3 for background */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -200,8 +206,8 @@
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ebefe3; /* Use ebefe3 for buttons */
+    color: #000;
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -209,10 +215,10 @@
   }
   
   .signup-container button:hover {
-    background-color: #0056b3;
+    background-color: #b2bda0; /* Adjust hover color as needed */
   }
   
-  /* Style for the Success Alert */
+  /* Success Alert */
   .success-alert {
     padding: 10px;
     background-color: #28a745;
@@ -220,5 +226,166 @@
     text-align: center;
     border-radius: 4px;
     margin-top: 10px;
+  }
+  
+  /* Cart Styles */
+  .cart-container {
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 400px;
+    background-color: #b2bda0; /* Use b2bda0 for background */
+    margin-top: 100px;
+    margin-left: 500px;
+    
+}
+  
+  .cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #ebefe3; /* Use ebefe3 for background */
+  }
+  
+  .cart-item h3 {
+    margin: 0;
+    color: #000;
+  }
+  
+  .cart-item p {
+    margin: 5px 0;
+    color: #000;
+  }
+  
+  .cart-item button {
+    background-color: #ff6961;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background-color: #ff4136;
+  }
+  
+  /* Payment Modal Styles */
+  .payment-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: #ebefe3; /* Use ebefe3 for background */
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  
+.modal-content input,
+.modal-content label {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.modal-content label {
+  text-align: left;
+}
+
+.modal-content button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Add your additional CSS below this */
+  /*more button css*/
+  .donateButton,
+.cart-item button,
+.button {
+  background-color: #ebefe3; /* Use ebefe3 for buttons */
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+.donateButton:hover,
+.cart-item button:hover,
+.button:hover {
+  background-color: #b2bda0; /* Adjust hover color as needed */
+}
+
+/*shop*/
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    box-sizing: border-box;
+    width: calc(50% - 20px); /* Set each card to take up half of the container width with some spacing */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .product-card img {
+    max-width: 50%; /* Set images to be half of their original size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any potential spacing below the image */
+    margin-bottom: 10px;
+  }
+  
+  .product-card h3 {
+    margin: 0;
+  }
+  
+  .product-card p {
+    margin: 5px 0;
+  }
+  
+  .product-card button {
+    background-color: #ebefe3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
   }
   
