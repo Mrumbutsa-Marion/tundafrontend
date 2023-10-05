@@ -6,16 +6,34 @@ function Signup() {
   const [telephone, setTelephone] = useState('');
   const [password, setPassword] = useState('');
 
+  const validateEmail = (email) => {
+    // Basic email validation regex
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validateTelephone = (telephone) => {
+    // Basic telephone number validation regex (10 digits)
+    return /^\d{10}$/.test(telephone);
+  };
+
+  const validatePassword = (password) => {
+    // Password should be at least 6 characters long
+    return password.length >= 6;
+  };
+
   const handleSignup = () => {
-    // Perform signup logic here (e.g., send data to backend)
-    alert('You have successfully subscribed!');
-    // Redirect to the homepage (assuming it's at '/')
-    window.location.href = '/';
+    if (validateEmail(email) && validateTelephone(telephone) && validatePassword(password)) {
+      alert('You have successfully subscribed!');
+      // Redirect to the homepage (assuming it's at '/')
+      window.location.href = '/';
+    } else {
+      alert('Please fill out the form correctly.');
+    }
   };
 
   return (
-    <div className="signup-container"> {/* Apply the signup-container class */}
-      <h2>Join Us </h2>
+    <div className="signup-container">
+      <h2>Join Us</h2>
       <div>
         <label>Email:</label>
         <input 
