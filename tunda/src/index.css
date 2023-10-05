@@ -259,7 +259,7 @@ body {
   }
   
   .cart-item button {
-    background-color: #ff6961;
+    background-color: green;
     color: #fff;
     border: none;
     padding: 10px 20px; /* Increased padding */
