@@ -1,11 +1,9 @@
-// About.js
-
 import React from 'react';
 import './index.css'; // Import the CSS file
 
 function About() {
   return (
-    <div class = "main-container">
+    <div className="container">
       <div className="about-section">
         <h2>OUR STORY</h2>
         <p>Welcome to Tropical Tunda - Delivering Freshness, Sharing Kindness</p>

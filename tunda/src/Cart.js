@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './index.css'; // Import your CSS file for Cart
 
 function Cart({ cartItems, removeFromCart }) {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -12,7 +11,8 @@ function Cart({ cartItems, removeFromCart }) {
   const [isCartEmpty, setIsCartEmpty] = useState(false);
 
   useEffect(() => {
-    setTotalPrice(cartItems.reduce((total, item) => total + item.price, 0));
+    const newTotalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+    setTotalPrice(newTotalPrice);
     setIsCartEmpty(cartItems.length === 0);
   }, [cartItems]);
 
@@ -33,12 +33,11 @@ function Cart({ cartItems, removeFromCart }) {
   };
 
   const handleConfirmPayment = () => {
-    // Validate the form inputs
     if (formData.name && formData.address && formData.paymentMethod) {
       alert('Payment confirmed!');
-      setShowPaymentModal(false); // Close the payment modal
-      removeFromCart(); // Remove all items from the cart
-      setIsCartEmpty(true); // Set cart as empty
+      setShowPaymentModal(false);
+      removeFromCart();
+      setIsCartEmpty(true);
     } else {
       alert('Please fill out all fields.');
     }
@@ -53,6 +52,7 @@ function Cart({ cartItems, removeFromCart }) {
         <div className="cart-items">
           {cartItems.map(item => (
             <div className="cart-item" key={item.id}>
+              <img src={item.image} alt={item.name} />
               <h3>{item.name}</h3>
               <p>Price: ${item.price}</p>
               <button onClick={() => removeFromCart(item.id)}>Remove</button>

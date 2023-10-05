@@ -4,10 +4,15 @@ function Shop({ addToCart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('https://tundatropical-flask.onrender.com/fruits') // Updated API URL
+    fetch('https://tundatropical-flask.onrender.com/fruits')
       .then(response => response.json())
       .then(data => setProducts(data));
   }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    alert(`${product.name} added to cart!`);
+  };
 
   return (
     <div className="shop-container">
@@ -21,7 +26,7 @@ function Shop({ addToCart }) {
             <p>Quantity: {product.quantity}</p>
             <p>{product.description}</p>
             <p>Super Name: {product.super_name}</p>
-            <button onClick={() => addToCart(product)}>Buy Now</button>
+            <button onClick={() => handleAddToCart(product)}>Buy Now</button>
           </div>
         ))}
       </div>
