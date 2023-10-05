@@ -1,0 +1,115 @@
+/* index.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8d9e6f;
+    display: flex;
+    justify-content: center;
+    /* Change align-items to flex-start */
+    align-items: flex-start;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #b2bda0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .button {
+    background-color: #ebefe3;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: #d4dac2;
+  }
+  
+  .button-text {
+    color: black;
+    font-size: 16px;
+  }
+  
+  .text-container {
+    background-color: #b2bda0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .subscribe-button {
+    background-color: #ebefe3;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #d4dac2;
+  }
+  
+  .subscribe-text {
+    color: black;
+    font-size: 16px;
+  }
+  
+  /* Navbar.css */
+
+.navbar {
+    background-color: #b2bda0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0;
+    padding: 0;
+    margin: 0 10px;
+  }
+  
+  .navbar-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .navbar-item a:hover {
+    color: #4a4a4a;
+  }
+  
+  /* Footer Styles */
+.footer {
+    background: #8d9e6f;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    
+  }
+  
+  
