@@ -2,32 +2,42 @@ import React, { useState } from 'react';
 import './index.css';
 
 function Signup() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [telephone, setTelephone] = useState('');
   const [password, setPassword] = useState('');
 
+  const validateName = (name) => {
+    return /^[a-zA-Z\s]+$/.test(name);
+  };
+
   const validateEmail = (email) => {
-    // Basic email validation regex
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const validateTelephone = (telephone) => {
-    // Basic telephone number validation regex (10 digits)
-    return /^\d{10}$/.test(telephone);
-  };
-
   const validatePassword = (password) => {
-    // Password should be at least 6 characters long
     return password.length >= 6;
   };
 
   const handleSignup = () => {
-    if (validateEmail(email) && validateTelephone(telephone) && validatePassword(password)) {
+    if (validateName(name) && validateEmail(email) && validatePassword(password)) {
       alert('You have successfully subscribed!');
-      // Redirect to the homepage (assuming it's at '/')
       window.location.href = '/';
     } else {
-      alert('Please fill out the form correctly.');
+      let errorMessage = '';
+
+      if (!validateName(name)) {
+        errorMessage += 'Please enter a valid name.\n';
+      }
+
+      if (!validateEmail(email)) {
+        errorMessage += 'Please enter a valid email address.\n';
+      }
+
+      if (!validatePassword(password)) {
+        errorMessage += 'Password should be at least 6 characters long.\n';
+      }
+
+      alert(errorMessage.trim());
     }
   };
 
@@ -35,19 +45,19 @@ function Signup() {
     <div className="signup-container">
       <h2>Join Us</h2>
       <div>
+        <label>Name:</label>
+        <input 
+          type="text" 
+          value={name} 
+          onChange={(e) => setName(e.target.value)} 
+        />
+      </div>
+      <div>
         <label>Email:</label>
         <input 
           type="email" 
           value={email} 
           onChange={(e) => setEmail(e.target.value)} 
-        />
-      </div>
-      <div>
-        <label>Telephone:</label>
-        <input 
-          type="tel" 
-          value={telephone} 
-          onChange={(e) => setTelephone(e.target.value)} 
         />
       </div>
       <div>
@@ -59,6 +69,9 @@ function Signup() {
         />
       </div>
       <button onClick={handleSignup}>Subscribe</button>
+
+      {/* Back Button */}
+      <button onClick={() => window.history.back()}>Back</button>
     </div>
   );
 }
