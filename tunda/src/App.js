@@ -33,13 +33,16 @@ function App() {
             element={<Shop addToCart={addToCart} />} 
           />
           <Route 
+          
             path="/cart" 
             element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} />} 
           />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/donate/:fruitId" element={<Donate />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
+      
     </Router>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 
-function Signup() {
+function SignupForm({ handleSignup, handleLoginForm }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,10 +18,10 @@ function Signup() {
     return password.length >= 6;
   };
 
-  const handleSignup = () => {
+  const handleSubmit = () => {
     if (validateName(name) && validateEmail(email) && validatePassword(password)) {
-      alert('You have successfully subscribed!');
-      window.location.href = '/';
+      // Call handleSignup prop function with the form data
+      handleSignup({ name, email, password });
     } else {
       let errorMessage = '';
 
@@ -42,33 +42,139 @@ function Signup() {
   };
 
   return (
-    <div className="signup-container">
+    <>
       <h2>Join Us</h2>
-      <div>
-        <label>Name:</label>
-        <input 
-          type="text" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
+      {/* Signup form JSX */}
+      <form>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input 
-          type="email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
+      </form>
+
+      <button onClick={handleSubmit}>Sign up</button>
+      <p>
+        Already have an account? <button onClick={handleLoginForm}>Login</button>
+      </p>
+    </>
+  );
+}
+
+function LoginForm({ handleLogin, handleSignupForm }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = () => {
+    // Call handleLogin prop function with the form data
+    handleLogin({ email, password });
+  };
+
+  return (
+    <>
+      <h2>Login</h2>
+      {/* Login form JSX */}
+      <form>
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input 
-          type="password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-        />
-      </div>
-      <button onClick={handleSignup}>Subscribe</button>
+      </form>
+
+      <button onClick={handleSubmit}>Login</button>
+      <p>
+        Don't have an account? <button onClick={handleSignupForm}>Sign up</button>
+      </p>
+    </>
+  );
+}
+
+function Signup() {
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  const handleSignup = (formData) => {
+    // Make a POST request to your Flask backend for signup using the deployed URL
+    fetch('https://tundatropical-flask.onrender.com/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // If the response status is OK (e.g., 200), it means the signup was successful
+          alert('You have successfully signed up!');
+          window.location.href = '/'; // Redirect to the home page or any other desired page
+        } else {
+          // If the response status is not OK, handle the error
+          throw new Error('Signup failed'); // Throw a specific error message for signup failure
+        }
+      })
+      .catch((error) => {
+        // Handle the error gracefully and display a more user-friendly message
+        alert('Signup failed. Please check your inputs and try again.'); // Display a more descriptive error message
+      });
+  };
+  
+  
+  
+  
+  
+  
+
+  const handleLogin = (formData) => {
+    // Make a POST request to your Flask backend for login using formData
+    fetch('https://tundatropical-flask.onrender.com/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Redirect to success page or perform any other actions upon successful login
+          alert('You have successfully logged in!');
+          window.location.href = '/';
+        } else {
+          throw new Error('Login failed');
+        }
+      })
+      .catch((error) => {
+        alert('An error occurred while logging in. Please try again.');
+      });
+  };
+
+  const handleLoginForm = () => {
+    setShowLoginForm(true);
+  };
+
+  const handleSignupForm = () => {
+    setShowLoginForm(false);
+  };
+
+  return (
+    <div className="signup-container">
+      {showLoginForm ? (
+        <LoginForm handleLogin={handleLogin} handleSignupForm={handleSignupForm} />
+      ) : (
+        <SignupForm handleSignup={handleSignup} handleLoginForm={handleLoginForm} />
+      )}
 
       {/* Back Button */}
       <button onClick={() => window.history.back()}>Back</button>

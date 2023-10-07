@@ -1,3 +1,4 @@
+// Cart.js
 import React, { useState, useEffect } from 'react';
 
 function Cart({ cartItems, removeFromCart }) {
@@ -105,7 +106,7 @@ function Cart({ cartItems, removeFromCart }) {
               Mobile Money
             </label>
             <button onClick={handleConfirmPayment}>Confirm Payment</button>
-          </div>
+            </div>
         </div>
       )}
     </div>

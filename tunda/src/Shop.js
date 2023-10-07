@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './index.css';
 
 function Shop({ addToCart }) {
   const [products, setProducts] = useState([]);
@@ -9,10 +11,12 @@ function Shop({ addToCart }) {
       .then(data => setProducts(data));
   }, []);
 
-  const handleAddToCart = (product) => {
-    addToCart(product);
-    alert(`${product.name} added to cart!`);
-  };
+const handleAddToCart = (product) => {
+  // Include the image_url property when adding to the cart
+  const productWithImage = { ...product, image: product.image_url };
+  addToCart(productWithImage);
+  alert(`${product.name} added to cart!`);
+};
 
   return (
     <div className="shop-container">
@@ -26,7 +30,12 @@ function Shop({ addToCart }) {
             <p>Quantity: {product.quantity}</p>
             <p>{product.description}</p>
             <p>Super Name: {product.super_name}</p>
-            <button onClick={() => handleAddToCart(product)}>Buy Now</button>
+            <button onClick={() => handleAddToCart(product)} className="buy-now-button">
+              Buy Now
+            </button>
+            <Link to={`/donate/${product.id}`} className="donate-button">
+              Donate
+            </Link>
           </div>
         ))}
       </div>

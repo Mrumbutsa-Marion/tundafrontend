@@ -1,397 +1,869 @@
 /* index.css */
 
 body {
-    background-color: #8d9e6f;
-    color: #000;
-  }
-  
-  .navbar {
-    background-color: #b2bda0;
-    display: flex;
-    justify-content: space-around; /* Spread items evenly */
-    border-radius: 15px; /* Oval out the edges */
-    overflow: hidden; /* Hide the overflow if needed */
-  }
-  
-  
-  .navbar-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around; /* Spread items evenly */
-    width: 100%; /* Occupy full width of the navbar */
-  }
-  
-  .navbar-item {
-    margin: 0;
-    padding: 15px 20px;
-  }
-  
-  .navbar-item a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .navbar-item:hover {
-    background-color: #b2bda0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .header-container,
-  .text-container-container {
-    background-color: #b2bda0; /* Use b2bda0 for containers */
-    padding: 80px; /* Add padding for space around content */
-    margin-top: 100px;
-    margin-left: 5px;
-    margin-right: 5px;
+  background-color: #8d9e6f;
+  color: #000;
 }
-  
-  .header {
-    color: #000;
-    text-align: center;
-  }
-  
-  .page-name {
-    font-size: 3em;
-    margin-bottom: 20px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Add some space between name and buttons */
-  }
-  
-  .button {
-    margin: 0 10px;
-    background-color: #ebefe3; /* Use ebefe3 for buttons */
-    color: #000;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .button-text {
-    font-size: 1.2em;
-  }
-  
-  .text-container {
-    text-align: center;
-    margin: 50px 0;
-  }
-  
-  .subscribe-button {
-    background-color: #ebefe3; /* Use ebefe3 for buttons */
-    color: #000;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .subscribe-text {
-    font-size: 1.2em;
-  }
-  
-  #background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-  
-  
-  /*donate*/
-  
-  .don {
-    text-align: center;
-  }
-  
-  .tagline {
-    font-family: 'Your Chosen Font', sans-serif; /* Add your preferred font here */
-  }
-  
-  .don {
-    margin-top: 50px; /* Adjust the margin as needed */
-  }
-  
-  .tagline {
-    font-size: 1.2em; /* Adjust font size as needed */
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .donateButton {
-    margin: 10px 0;
-    padding: 10px 20px;
+header{
+  background-color:  rgba(0, 0, 0, 0.38);
+  height: 600px;
+  max-width: 100%;
+  top: 1px; 
+  border-radius: 0% 0% 3% 3%;
+  background-image: url(./lemons.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: lighten;
+  position: relative;/*modify  color: #3493d5;
+anything in the head*/
+  display: block;
+}
+.header-content{
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50, -50);
+  color: white;
+}
+
+
+.header-content h1{
+font-size: 5em;
+}
+
+.header-content hr{
+  width: 50%;
+  top: -30px;
+}
+.navbar {
+  background-color: #b2bda0;
+  display: flex;
+  justify-content: space-around; /* Spread items evenly */
+  border-radius: 3% 3% 0% 0%;  /* Oval out the edges */
+  overflow: hidden; /* Hide the overflow if needed */
+}
+
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Spread items evenly */
+  width: 100%; /* Occupy full width of the navbar */
+}
+
+.navbar-item {
+  margin: 0;
+  padding: 15px 20px;
+  font-size: 2em;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-item a{
     font-size: 1em;
-    background-color: #007bff; /* Adjust the color as needed */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    color: #272323;
+    transition: 0.4s ease-in-out;
+}
+.navbar-item a:hover{
+    color: #eddd2f;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container,
+.text-container-container {
+  background-color: #b2bda0; /* Use b2bda0 for containers */
+  padding: 80px; /* Add padding for space around content */
+  margin-top: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.header {
+  color: #000;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  /* Adjust header height for smaller screens */
+  header {
+    height: 400px;
   }
-  
-  .donateButton:hover {
-    background-color: #0056b3; /* Adjust hover color as needed */
+
+  .header-content {
+    top: 30%;
   }
-  
-  /*about*/
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 800px; /* Adjust as needed */
-    margin-top: 50px;
-    padding: 20px;
-    border: 2px solid #b2bda0; /* White border */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    background-color: #b2bda0; /* Optional: Sets background color to white */
+
+  .navbar-item {
+    font-size: 1.5em;
+    padding: 10px 15px;
   }
-  
-  .about-section {
-    margin-bottom: 20px;
+
+  .header-content h1 {
+    font-size: 3em;
   }
-  
-  /* Signup Section */
-  .signup-container {
-    max-width: 400px;
-    margin-top: 100px;
-    margin-left: 500px;
-    padding: 40px 20px;
-    background-color: #ebefe3; /* Use ebefe3 for background */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .signup-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .signup-container label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-  }
-  
-  .signup-container input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .signup-container button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #ebefe3; /* Use ebefe3 for buttons */
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .signup-container button:hover {
-    background-color: #b2bda0; /* Adjust hover color as needed */
-  }
-  
-  /* Success Alert */
-  .success-alert {
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
+
+  /* Adjust font sizes and padding for smaller screens */
+  .button-container {
     margin-top: 10px;
   }
-  
-  /* Cart Styles */
- /* Add this to your index.css file */
-
- .cart-container {
-    text-align: center;
-  }
-  
-  .cart-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cart-item {
-    border: 1px solid #ccc;
-    padding: 20px; /* Increased padding */
-    margin: 20px 0; /* Increased margin */
-    border-radius: 8px;
-    background-color: #ebefe3;
-    max-width: 400px; /* Enlarged max-width */
-  }
-  
-  .cart-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* Increased margin */
-  }
-  
-  .cart-item h3 {
-    margin: 0;
-    color: #000;
-  }
-  
-  .cart-item p {
-    margin: 10px 0; /* Increased margin */
-    color: #000;
-  }
-  
-  .cart-item button {
-    background-color: #ff6961;
-    color: #fff;
-    border: none;
-    padding: 10px 20px; /* Increased padding */
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px; /* Increased margin */
-  }
-  
-  .cart-item button:hover {
-    background-color: #ff4136;
-  }
-  
-  .total-price p {
-    font-size: 1.5em; /* Increased font size */
-    font-weight: bold;
-  }
-  
-  .total-price button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 15px 30px; /* Increased padding */
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px; /* Increased margin */
-  }
-  
-  .total-price button:hover {
-    background-color: #0056b3;
-  }
-  
-  
-  
-  /* Payment Modal Styles */
-  .payment-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    background: #ebefe3; /* Use ebefe3 for background */
-    padding: 40px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 400px;
-  }
-  
-  
-.modal-content input,
-.modal-content label {
-  display: block;
-  margin: 10px 0;
-  width: 100%;
 }
 
-.modal-content label {
-  text-align: left;
+/* Further adjustments for very small screens (e.g., portrait mode on small phones) */
+
+@media (max-width: 480px) {
+  header {
+    height: 300px;
+  }
+
+  .header-content {
+    top: 20%;
+  }
+
+  .navbar-item {
+    font-size: 1.2em;
+    padding: 8px 12px;
+  }
+
+  .header-content h1 {
+    font-size: 2.5em;
+  }
+
+  .button-container {
+    margin-top: 5px;
+  }
 }
 
-.modal-content button {
-  background-color: #4caf50;
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Footer styles */
+.footer {
+  background-color: #272323;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 3em; /* Adjust header font size for smaller screens */
+  }
+
+  .page-name {
+    font-size: 2em; /* Adjust page name font size for smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .button-container {
+    margin-top: 10px; /* Adjust button container margin for smaller screens */
+  }
+
+  .subscribe-button {
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
+  }
+
+  /* Footer adjustments for smaller screens */
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+}
+
+/* Additional media queries for very small screens if needed */
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 2.5em; /* Further adjust header font size for very small screens */
+  }
+
+  .page-name {
+    font-size: 1.5em; /* Further adjust page name font size for very small screens */
+    margin-bottom: 5px;
+  }
+
+  .button-container {
+    margin-top: 15px; /* Further adjust button container margin for very small screens */
+  }
+
+  .subscribe-button {
+    padding: 6px 12px; /* Further adjust button padding for very small screens */
+  }
+
+  /* Footer adjustments for very small screens */
+  .footer {
+    padding: 5px;
+  }
+}
+
+.page-name {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add some space between name and buttons */
+}
+
+button{
+  display: inline-block;
+  font-size: 23px;
+  font-weight: 200;
+  border-radius: 6px;
+  color: #E2D2F9;
+  border-radius: 2px solid transparent;
+  text-transform: uppercase;
+  background: #f7f6fa;
+  padding: 10px 23px;
+  bottom: -30px;
+  top: -6px;
+}
+button a{
+  font-size: 1em;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  color: #272323;
+  transition: 0.4s ease-in-out;
+
+}
+button a:hover{
+  color: #eddd2f;
+}
+button:hover{
+  background: #b2bda0;
+  border: 2px solid transparent;
+  transform: translate(10px);
+}
+
+
+.button-text {
+  font-size: 1.2em;
+}
+
+.text-container {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.subscribe-button {
+  background-color: #ebefe3; /* Use ebefe3 for buttons */
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.subscribe-text {
+  font-size: 1.2em;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
+/*donate*/
+
+.don {
+  text-align: center;
+}
+
+.tagline {
+  font-family: 'Your Chosen Font', sans-serif; /* Add your preferred font here */
+}
+
+.don {
+  margin-top: 50px; /* Adjust the margin as needed */
+}
+
+.tagline {
+  font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+/*donate*/
+/* Add this CSS to your existing CSS or index.css */
+
+.don {
+  text-align: center;
+  padding: 20px;
+}
+
+.donate-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.tagline {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.donateButton {
+  background-color: #272323;
   color: #fff;
   border: none;
   padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin: 10px;
+  text-decoration: none; /* Remove the default link underline */
+}
+
+.donateButton:hover {
+  background-color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .donate-image {
+    max-width: 80%; /* Adjust image size for smaller screens */
+  }
+}
+
+.donateButton {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #b2bda0; /* Adjust the color as needed */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donateButton:hover {
+  background-color: #b2bda0; /* Adjust hover color as needed */
+}
+
+/*about*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px; /* Adjust as needed */
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px solid #b2bda0; /* White border */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  background-color: #b2bda0; /* Optional: Sets background color to white */
+}
+
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Styles for the About component */
+
+.about-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-subtitle {
+  font-size: 3.8em;
+  margin-bottom: 10px;
+}
+
+.about-text {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+}
+
+.about-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2em;
+  }
+
+  .about-subtitle {
+    font-size: 1.5em;
+  }
+
+  .about-text {
+    font-size: 1em;
+  }
+}
+
+/* Additional media queries for very small screens if needed */
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8em;
+  }
+
+  .about-subtitle {
+    font-size: 1.3em;
+  }
+
+  .about-text {
+    font-size: 0.9em;
+  }
+}
+
+
+/* Signup Section */
+.signup-container {
+  max-width: 400px;
+  margin-top: 100px;
+  margin-left: 500px;
+  padding: 40px 20px;
+  background-color: #ebefe3; /* Use ebefe3 for background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ebefe3; /* Use ebefe3 for buttons */
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-container button:hover {
+  background-color: #b2bda0; /* Adjust hover color as needed */
+}
+
+/* Success Alert */
+.success-alert {
+  padding: 10px;
+  /* background-color: #28a745; */
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+/* index.css for Signup and Login Forms */
+
+/* Common styles for both forms */
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #b2bda0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #272323;
+}
+
+p {
+  text-align: center;
+}
+
+/* Styles for the Signup Form */
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ebefe3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container button {
+  background-color: #b2bda0;
+}
+
+.signup-container button:hover {
+  background-color: #272323;
+}
+
+/* Styles for the Login Form */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ebefe3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container button {
+  background-color: #b2bda0;
+}
+
+.login-container button:hover {
+  background-color: #28a745;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+/* Additional media queries for very small screens if needed */
+@media (max-width: 480px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.8em;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}
+
+/* Cart Styles */
+/* Add this to your index.css file */
+
+.cart-container {
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-item {
+  border: 1px solid #ccc;
+  padding: 20px; /* Increased padding */
+  margin: 20px 0; /* Increased margin */
+  border-radius: 8px;
+  background-color: #ebefe3;
+  max-width: 400px; /* Enlarged max-width */
+}
+
+.cart-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.cart-item h3 {
+  margin: 0;
+  color: #000;
+}
+
+.cart-item p {
+  margin: 10px 0; /* Increased margin */
+  color: #000;
+}
+
+.cart-item button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Increased padding */
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px; /* Increased margin */
+}
+
+.cart-item button:hover {
+  background-color: #ff4136;
+}
+
+.total-price p {
+  font-size: 1.5em; /* Increased font size */
+  font-weight: bold;
+}
+
+.total-price button {
+  background-color: #272323;
+  color: #fff;
+  border: none;
+  padding: 15px 30px; /* Increased padding */
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px; /* Increased margin */
+}
+
+.total-price button:hover {
+ background-color: #b2bda0;
+  ;
+}
+
+
+
+/* Payment Modal Styles */
+.payment-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #ebefe3; /* Use ebefe3 for background */
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+}
+
+
+.modal-content input,
+.modal-content label {
+display: block;
+margin: 10px 0;
+width: 100%;
+}
+
+.modal-content label {
+text-align: left;
+}
+
+.modal-content button {
+background-color: #4caf50;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+margin-top: 10px;
 }
 
 .modal-content button:hover {
-  background-color: #45a049;
+background-color: #45a049;
 }
 
 .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+cursor: pointer;
 }
 
 /*shop*/
 
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Styles for the Shop component */
+
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Styles for the Shop component */
+
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Styles for the Shop component */
+
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Styles for the Shop component */
+
+/* Add this to your existing CSS file or create a new CSS file and import it */
+
+/* Styles for the Shop component */
+
 .shop-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly in two columns */
+  gap: 20px; /* Add spacing between product cards */
+}
+
+.product-card {
+  flex-basis: calc(50% - 20px); /* Two products per row with spacing for larger screens */
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ebefe3;
+  text-align: center;
   
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+}
+
+.product-card img {
+  max-width: 100%;
+  width: 200px; /* Set a fixed width for the images */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.product-card h3 {
+  font-size: 1.5em; /* Increase font size for product titles */
+  margin: 0;
+  color: #000;
+}
+
+.product-card p {
+  margin: 10px 0;
+  color: #000;
+}
+
+.product-card button {
+  background-color: #272323; /* Change the background color to #272323 */
+  color: #fff; /* Change the text color to white */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-card button:hover {
+  background-color: #000; /* Change the hover background color to another shade */
+}
+
+
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
   .product-card {
-    box-sizing: border-box;
-    width: calc(50% - 20px); /* Set each card to take up half of the container width with some spacing */
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
+    flex-basis: calc(50% - 20px); /* Two products per row for smaller screens */
   }
-  
-  .product-card img {
-    max-width: 50%; /* Set images to be half of their original size */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any potential spacing below the image */
-    margin-bottom: 10px;
+
+  /* For screens smaller than 480px, display one product per row */
+  @media (max-width: 480px) {
+    .product-card {
+      flex-basis: calc(100% - 20px); /* Full width on very small screens */
+    }
   }
-  
-  .product-card h3 {
-    margin: 0;
+}
+
+/* Inside your index.css file */
+/* Add styles for the Donate button */
+/* Styles for the Donate button */
+.donate-button {
+  background-color: #272323;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .donate-button {
+    font-size: 14px;
   }
-  
-  .product-card p {
-    margin: 5px 0;
-  }
-  
-  .product-card button {
-    background-color: #ebefe3;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
- /*image*/
- 
-  
+}
+
+
+
+
+

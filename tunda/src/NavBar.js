@@ -26,7 +26,8 @@ function Navbar() {
         </li>
       </ul>
     </nav>
-  );
+      );
 }
+  /* background-color: #28a745; */
 
 export default Navbar;
