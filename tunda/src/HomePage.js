@@ -23,7 +23,7 @@ function HomePage() {
       <div className="text-container">
         <p>Sign Up with email to receive updates</p>
         <button>
-          <Link to="/signup" className="subscribe-button">
+          <Link to="/signup" >
             <span className="subscribe-text">Subscribe</span>
           </Link>
         </button>
