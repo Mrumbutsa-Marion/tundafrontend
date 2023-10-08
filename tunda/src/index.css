@@ -394,23 +394,35 @@ span{
 /* Styles for the About component */
 
 .about-title {
-  font-size: 2.5em;
+  font-size: 3em;
   margin-bottom: 20px;
+  color: #272323;
 }
 
 .about-subtitle {
-  font-size: 3.8em;
+  font-size: 2.5em;
   margin-bottom: 10px;
+  color: #272323;
 }
 
 .about-text {
-  font-size: 3.2em;
+  font-size: 2em;
   margin-bottom: 20px;
+  color: #272323;
+
 }
 
 .about-list {
   list-style-type: disc;
   padding-left: 20px;
+  color: #272323;
+
+}
+.about-list-item {
+  font-size: 2em;
+  text-align: justify;
+  list-style: none;
+
 }
 
 /* Responsive adjustments for smaller screens */
@@ -418,14 +430,26 @@ span{
 @media (max-width: 768px) {
   .about-title {
     font-size: 2em;
+    color: #272323;
+
   }
 
   .about-subtitle {
-    font-size: 1.5em;
+    font-size: 2em;
+    color: #272323;
+
   }
 
   .about-text {
-    font-size: 1em;
+    font-size: 2em;
+    color: #272323;
+
+  }
+  .about-list-item {
+    font-size: 1.8em;
+    text-align: justify;
+    list-style: none;
+  
   }
 }
 
@@ -433,15 +457,27 @@ span{
 
 @media (max-width: 480px) {
   .about-title {
-    font-size: 1.8em;
+    font-size: 2.8em;
+    color: #272323;
+
   }
 
   .about-subtitle {
-    font-size: 1.3em;
+    font-size: 2em;
+    color: #272323;
+
   }
 
   .about-text {
-    font-size: 0.9em;
+    font-size: 1.7em;
+    color: #272323;
+
+  }
+  .about-list-item {
+    font-size: 1.7em;
+    text-align: justify;
+    list-style: none;
+  
   }
 }
 

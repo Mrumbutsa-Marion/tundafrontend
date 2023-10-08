@@ -22,20 +22,28 @@ function About() {
         <h3 className="about-subtitle">Why Choose Tropical Tunda?</h3>
         <ul className="about-list">
           <li className="about-list-item">
-            <strong>Freshness Guaranteed:</strong> We source the finest fruits
+            <span>Freshness Guaranteed:</span> We source the finest fruits
             from local growers to ensure that every bite is bursting with flavor
             and nutrition.
           </li>
           <li className="about-list-item">
-            <strong>Variety of Options:</strong> Our extensive range of fruits
+            <span>Variety of Options:</span> Our extensive range of fruits
             caters to all tastes and preferences, from exotic fruits to local favorites.
           </li>
           <li className="about-list-item">
-            <strong>Community Support:</strong> By choosing Tropical Tunda, you
+            <span>Community Support:</span> By choosing Tropical Tunda, you
             are contributing to community development projects and helping local
             farmers thrive.
           </li>
-          {/* Add more reasons here */}
+          <li className="about-list-item">
+            <span>Experience the Freshness:</span> Taste the difference with
+            our hand-picked, farm-fresh fruits delivered right to your doorstep.
+          </li>
+          <li className="about-list-item">
+            <span>Join the Tropical Tunda Family:</span> Become a part of our
+            growing community of fruit enthusiasts who believe in a healthier and
+            happier lifestyle.
+          </li>
         </ul>
       </div>
       <div className="about-section">
