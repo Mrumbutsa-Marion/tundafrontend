@@ -17,7 +17,7 @@
 # **Description**
 Welcome to Tropical –Tunda your go-to destination for fresh and delicious fruits delivered right to your doorstep! In today's fast-paced world, finding the time to shop for high-quality fruits can be a challenge. That's where we come in, bringing the farmer's market experience directly to you.
 At Tropical-Tunda, we believe that everyone deserves easy access to fresh and nutritious fruits, and our mission is to simplify the way you shop for them. Whether you're a health-conscious individual, a busy professional, or a family looking for convenient and wholesome snacks, our fruit delivery app is designed to meet your needs.
-# ***Problem**
+# **Problem**
 In today's hectic lifestyle, many individuals find it challenging to maintain a healthy and balanced diet. The lack of time for grocery shopping and the convenience of processed snacks often lead to poor dietary choices. Additionally, the accessibility of fresh and high-quality fruits may be limited, especially in urban areas.
 #***Solution**
 Introducing a Fruit Delivery App – an innovative solution to address the challenges of maintaining a nutritious diet amid busy schedules. This app provides a convenient way for users to access a wide variety of fresh fruits without the hassle of visiting a physical store.
