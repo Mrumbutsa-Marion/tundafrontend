@@ -39,7 +39,6 @@ function Donate() {
           <div className="product-details" key={index}>
             <h3>{product.name}</h3>
             <p>Price: ${product.price}</p>
-            {/* Add more product details as needed */}
           </div>
         ))}
       </div>

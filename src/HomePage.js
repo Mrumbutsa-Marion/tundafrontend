@@ -28,7 +28,6 @@ function HomePage() {
           </Link>
         </button>
       </div>
-      {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <p>&copy; 2023 Tropical Tunda</p>

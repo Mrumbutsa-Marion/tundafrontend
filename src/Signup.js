@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './index.css';
 
 function SignupForm({ handleSignup, handleLoginForm }) {
-  const [name, setName] = useState('');
+  const [user_name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const validateName = (name) => {
-    return /^[a-zA-Z\s]+$/.test(name);
+  const validateName = (user_name) => {
+    return /^[a-zA-Z\s]+$/.test(user_name);
   };
 
   const validateEmail = (email) => {
@@ -19,15 +19,15 @@ function SignupForm({ handleSignup, handleLoginForm }) {
   };
 
   const handleSubmit = () => {
-    if (validateName(name) && validateEmail(email) && validatePassword(password)) {
+    if (validateEmail(email) && validatePassword(password)) {
       // Call handleSignup prop function with the form data
-      handleSignup({ name, email, password });
+      handleSignup({ user_name, email, password });
     } else {
       let errorMessage = '';
 
-      if (!validateName(name)) {
-        errorMessage += 'Please enter a valid name.\n';
-      }
+      // if (!validateName(user_name)) {
+      //   errorMessage += 'Please enter a valid name.\n';
+      // }
 
       if (!validateEmail(email)) {
         errorMessage += 'Please enter a valid email address.\n';
@@ -47,7 +47,7 @@ function SignupForm({ handleSignup, handleLoginForm }) {
       {/* Signup form JSX */}
       <form>
         <label htmlFor="name">Name:</label>
-        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <input type="text" id="user_name" value={user_name} onChange={(e) => setName(e.target.value)} />
 
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -81,7 +81,6 @@ function LoginForm({ handleLogin, handleSignupForm }) {
   return (
     <>
       <h2>Login</h2>
-      {/* Login form JSX */}
       <form>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -176,7 +175,6 @@ function Signup() {
         <SignupForm handleSignup={handleSignup} handleLoginForm={handleLoginForm} />
       )}
 
-      {/* Back Button */}
       <button onClick={() => window.history.back()}>Back</button>
     </div>
   );

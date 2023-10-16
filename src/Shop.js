@@ -12,7 +12,6 @@ function Shop({ addToCart }) {
   }, []);
 
 const handleAddToCart = (product) => {
-  // Include the image_url property when adding to the cart
   const productWithImage = { ...product, image: product.image_url };
   addToCart(productWithImage);
   alert(`${product.name} added to cart!`);

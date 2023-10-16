@@ -35,7 +35,6 @@ function About() {
             are contributing to community development projects and helping local
             farmers thrive.
           </li>
-          {/* Add more reasons here */}
         </ul>
       </div>
       <div className="about-section">

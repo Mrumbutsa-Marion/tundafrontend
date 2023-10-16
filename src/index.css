@@ -1,5 +1,9 @@
 /* index.css */
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body {
   background-color: #8d9e6f;
   color: #000;
@@ -14,8 +18,7 @@ header{
   background-size: cover;
   background-position: center center;
   background-blend-mode: lighten;
-  position: relative;/*modify  color: #3493d5;
-anything in the head*/
+  position: relative;
   display: block;
 }
 .header-content{
@@ -38,9 +41,9 @@ font-size: 5em;
 .navbar {
   background-color: #b2bda0;
   display: flex;
-  justify-content: space-around; /* Spread items evenly */
-  border-radius: 3% 3% 0% 0%;  /* Oval out the edges */
-  overflow: hidden; /* Hide the overflow if needed */
+  justify-content: space-around; 
+  border-radius: 3% 3% 0% 0%;  
+  overflow: hidden; 
 }
 
 
@@ -48,8 +51,8 @@ font-size: 5em;
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: space-around; /* Spread items evenly */
-  width: 100%; /* Occupy full width of the navbar */
+  justify-content: space-around; 
+  width: 100%; 
 }
 
 .navbar-item {
@@ -80,8 +83,8 @@ font-size: 5em;
 
 .header-container,
 .text-container-container {
-  background-color: #b2bda0; /* Use b2bda0 for containers */
-  padding: 80px; /* Add padding for space around content */
+  background-color: #b2bda0; 
+  padding: 80px; 
   margin-top: 100px;
   margin-left: 5px;
   margin-right: 5px;
@@ -92,7 +95,7 @@ font-size: 5em;
   text-align: center;
 }
 @media (max-width: 768px) {
-  /* Adjust header height for smaller screens */
+  /* Adjusting header height for smaller screens */
   header {
     height: 400px;
   }
@@ -110,13 +113,13 @@ font-size: 5em;
     font-size: 3em;
   }
 
-  /* Adjust font sizes and padding for smaller screens */
+  /* Adjusting font sizes and padding for smaller screens */
   .button-container {
     margin-top: 10px;
   }
 }
 
-/* Further adjustments for very small screens (e.g., portrait mode on small phones) */
+/* Adjusting for very small screens */
 
 @media (max-width: 480px) {
   header {
@@ -141,7 +144,6 @@ font-size: 5em;
   }
 }
 
-/* Add this to your existing CSS file or create a new CSS file and import it */
 
 /* Footer styles */
 .footer {
@@ -159,20 +161,20 @@ font-size: 5em;
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 3em; /* Adjust header font size for smaller screens */
+    font-size: 3em; 
   }
 
   .page-name {
-    font-size: 2em; /* Adjust page name font size for smaller screens */
+    font-size: 2em; 
     margin-bottom: 10px;
   }
 
   .button-container {
-    margin-top: 10px; /* Adjust button container margin for smaller screens */
+    margin-top: 10px; 
   }
 
   .subscribe-button {
-    padding: 8px 16px; /* Adjust button padding for smaller screens */
+    padding: 8px 16px; 
   }
 
   /* Footer adjustments for smaller screens */
@@ -185,23 +187,23 @@ font-size: 5em;
   }
 }
 
-/* Additional media queries for very small screens if needed */
+/* Adjustement  for very small screens*/
 @media (max-width: 480px) {
   .header-content h1 {
-    font-size: 2.5em; /* Further adjust header font size for very small screens */
+    font-size: 2.5em;
   }
 
   .page-name {
-    font-size: 1.5em; /* Further adjust page name font size for very small screens */
+    font-size: 1.5em;
     margin-bottom: 5px;
   }
 
   .button-container {
-    margin-top: 15px; /* Further adjust button container margin for very small screens */
+    margin-top: 15px; 
   }
 
   .subscribe-button {
-    padding: 6px 12px; /* Further adjust button padding for very small screens */
+    padding: 6px 12px; 
   }
 
   /* Footer adjustments for very small screens */
@@ -218,7 +220,7 @@ font-size: 5em;
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Add some space between name and buttons */
+  margin-top: 20px; 
 }
 
 button{
@@ -249,7 +251,7 @@ button a:hover{
   color: #eddd2f;
 }
 button:hover{
-  background: #b2bda0;
+  background: #a0ce55;
   border: 2px solid transparent;
   transform: translate(10px);
 }
@@ -268,7 +270,7 @@ span{
 }
 
 .subscribe-button {
-  background-color: #ebefe3; /* Use ebefe3 for buttons */
+  background-color: #ebefe3; 
   color: #000;
   padding: 10px 20px;
   text-decoration: none;
@@ -296,15 +298,15 @@ span{
 }
 
 .tagline {
-  font-family: 'Your Chosen Font', sans-serif; /* Add your preferred font here */
+  font-family: 'Your Chosen Font', sans-serif;
 }
 
 .don {
-  margin-top: 50px; /* Adjust the margin as needed */
+  margin-top: 50px;
 }
 
 .tagline {
-  font-size: 1.2em; /* Adjust font size as needed */
+  font-size: 1.2em; 
 }
 
 .buttons {
@@ -313,8 +315,6 @@ span{
   align-items: center;
   margin-top: 20px;
 }
-/*donate*/
-/* Add this CSS to your existing CSS or index.css */
 
 .don {
   text-align: center;
@@ -346,7 +346,7 @@ span{
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   margin: 10px;
-  text-decoration: none; /* Remove the default link underline */
+  text-decoration: none;  
 }
 
 .donateButton:hover {
@@ -356,7 +356,7 @@ span{
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .donate-image {
-    max-width: 80%; /* Adjust image size for smaller screens */
+    max-width: 80%; 
   }
 }
 
@@ -364,7 +364,7 @@ span{
   margin: 10px 0;
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #b2bda0; /* Adjust the color as needed */
+  background-color: #b2bda0;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -372,7 +372,7 @@ span{
 }
 
 .donateButton:hover {
-  background-color: #b2bda0; /* Adjust hover color as needed */
+  background-color: #b2bda0; 
 }
 
 /*about*/
@@ -381,16 +381,14 @@ span{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 800px; /* Adjust as needed */
+  max-width: 800px; 
   margin-top: 50px;
   padding: 20px;
-  border: 2px solid #b2bda0; /* White border */
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  background-color: #b2bda0; /* Optional: Sets background color to white */
+  border: 2px solid #b2bda0; 
+  border-radius: 10px; 
+  background-color: #b2bda0; 
+
 }
-
-/* Add this to your existing CSS file or create a new CSS file and import it */
-
 /* Styles for the About component */
 
 .about-title {
@@ -413,7 +411,7 @@ span{
   padding-left: 20px;
 }
 
-/* Responsive adjustments for smaller screens */
+/* responsive adjustments for smaller screens */
 
 @media (max-width: 768px) {
   .about-title {
@@ -429,7 +427,7 @@ span{
   }
 }
 
-/* Additional media queries for very small screens if needed */
+/* adjustments for very small screens if needed */
 
 @media (max-width: 480px) {
   .about-title {
@@ -452,7 +450,7 @@ span{
   margin-top: 100px;
   margin-left: 500px;
   padding: 40px 20px;
-  background-color: #ebefe3; /* Use ebefe3 for background */
+  background-color: #ebefe3;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -480,7 +478,7 @@ span{
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #ebefe3; /* Use ebefe3 for buttons */
+  background-color: #ebefe3; 
   color: #000;
   border: none;
   border-radius: 4px;
@@ -489,21 +487,19 @@ span{
 }
 
 .signup-container button:hover {
-  background-color: #b2bda0; /* Adjust hover color as needed */
+  background-color: #b2bda0; 
+  color: #eddd2f;
 }
 
 /* Success Alert */
 .success-alert {
   padding: 10px;
-  /* background-color: #28a745; */
   color: #fff;
   text-align: center;
   border-radius: 4px;
   margin-top: 10px;
 }
-/* index.css for Signup and Login Forms */
 
-/* Common styles for both forms */
 h2 {
   text-align: center;
   font-size: 2em;
@@ -604,7 +600,7 @@ p {
   }
 }
 
-/* Additional media queries for very small screens if needed */
+/* adjustments for very small screens if needed */
 @media (max-width: 480px) {
   form {
     padding: 10px;
@@ -624,7 +620,6 @@ p {
 }
 
 /* Cart Styles */
-/* Add this to your index.css file */
 
  .cart-container {
     text-align: center;
@@ -638,17 +633,17 @@ p {
   
   .cart-item {
     border: 1px solid #ccc;
-    padding: 20px; /* Increased padding */
-    margin: 20px 0; /* Increased margin */
+    padding: 20px;
+    margin: 20px 0; 
     border-radius: 8px;
     background-color: #ebefe3;
-    max-width: 400px; /* Enlarged max-width */
+    max-width: 400px; 
   }
   
   .cart-item img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px; /* Increased margin */
+    margin-bottom: 20px;
   }
   
   .cart-item h3 {
@@ -657,7 +652,7 @@ p {
   }
   
   .cart-item p {
-    margin: 10px 0; /* Increased margin */
+    margin: 10px 0; 
     color: #000;
   }
   
@@ -665,10 +660,10 @@ p {
     background-color: #ff6961;
     color: #fff;
     border: none;
-    padding: 10px 20px; /* Increased padding */
+    padding: 10px 20px; 
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 20px; /* Increased margin */
+    margin-top: 20px; 
   }
   
   .cart-item button:hover {
@@ -676,7 +671,7 @@ p {
   }
   
   .total-price p {
-    font-size: 1.5em; /* Increased font size */
+    font-size: 1.5em;
     font-weight: bold;
   }
   
@@ -685,10 +680,10 @@ p {
     color: #fff;
     border: none;
     font-weight: 500;
-    padding: 15px 30px; /* Increased padding */
+    padding: 15px 30px;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 20px; /* Increased margin */
+    margin-top: 20px; 
   }
   
   .total-price button:hover {
@@ -714,7 +709,7 @@ p {
   }
   
   .modal-content {
-    background: #ebefe3; /* Use ebefe3 for background */
+    background: #ebefe3; 
     padding: 40px;
     border-radius: 8px;
     text-align: center;
@@ -755,27 +750,6 @@ font-size: 24px;
 cursor: pointer;
 }
 
-/*shop*/
-
-/* Add this to your existing CSS file or create a new CSS file and import it */
-
-/* Styles for the Shop component */
-
-/* Add this to your existing CSS file or create a new CSS file and import it */
-
-/* Styles for the Shop component */
-
-/* Add this to your existing CSS file or create a new CSS file and import it */
-
-/* Styles for the Shop component */
-
-/* Add this to your existing CSS file or create a new CSS file and import it */
-
-/* Styles for the Shop component */
-
-/* Add this to your existing CSS file or create a new CSS file and import it */
-
-/* Styles for the Shop component */
 
 .shop-container {
   max-width: 1200px;
@@ -786,12 +760,12 @@ cursor: pointer;
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribute items evenly in two columns */
-  gap: 20px; /* Add spacing between product cards */
+  justify-content: space-between; 
+  gap: 20px; 
 }
 
 .product-card {
-  flex-basis: calc(50% - 20px); /* Two products per row with spacing for larger screens */
+  flex-basis: calc(50% - 20px); 
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid #ccc;
@@ -803,14 +777,14 @@ cursor: pointer;
 
 .product-card img {
   max-width: 100%;
-  width: 200px; /* Set a fixed width for the images */
-  height: 200px; /* Set a fixed height for the images */
+  width: 200px; 
+  height: 200px; 
   object-fit: cover;
   margin-bottom: 20px;
 }
 
 .product-card h3 {
-  font-size: 1.5em; /* Increase font size for product titles */
+  font-size: 1.5em; 
   margin: 0;
   color: #000;
 }
@@ -821,8 +795,8 @@ cursor: pointer;
 }
 
 .product-card button {
-  background-color: #272323; /* Change the background color to #272323 */
-  color: #fff; /* Change the text color to white */
+  background-color: #272323; 
+  color: #fff; 
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -830,28 +804,26 @@ cursor: pointer;
 }
 
 .product-card button:hover {
-  background-color: #000; /* Change the hover background color to another shade */
+  background-color: #000; 
 }
 
 
 /* Responsive adjustments for smaller screens */
-
+/* Two products per row for smaller screens */
 @media (max-width: 768px) {
   .product-card {
-    flex-basis: calc(50% - 20px); /* Two products per row for smaller screens */
+    flex-basis: calc(50% - 20px); 
   }
 
   /* For screens smaller than 480px, display one product per row */
   @media (max-width: 480px) {
     .product-card {
-      flex-basis: calc(100% - 20px); /* Full width on very small screens */
+      flex-basis: calc(100% - 20px); 
     }
   }
 }
 
-/* Inside your index.css file */
-/* Add styles for the Donate button */
-/* Styles for the Donate button */
+
 .donate-button {
   background-color: #272323;
   color: white;
@@ -863,7 +835,7 @@ cursor: pointer;
   margin: 10px;
 }
 
-/* Responsive styles for smaller screens */
+/* for smaller screens */
 @media (max-width: 768px) {
   .donate-button {
     font-size: 14px;
